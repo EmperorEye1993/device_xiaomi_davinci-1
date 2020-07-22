@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-service.davinci"
+#define LOG_TAG "vendor.mokee.livedisplay@2.0-service.davinci"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>
@@ -22,8 +22,8 @@
 
 #include "SunlightEnhancement.h"
 
-using ::vendor::lineage::livedisplay::V2_0::ISunlightEnhancement;
-using ::vendor::lineage::livedisplay::V2_0::implementation::SunlightEnhancement;
+using ::vendor::mokee::livedisplay::V2_0::ISunlightEnhancement;
+using ::vendor::mokee::livedisplay::V2_0::implementation::SunlightEnhancement;
 
 int main() {
     android::sp<ISunlightEnhancement> sunlightEnhancement = new SunlightEnhancement();
