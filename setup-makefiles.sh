@@ -25,9 +25,9 @@ INITIAL_COPYRIGHT_YEAR=2020
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-MK_ROOT="${MY_DIR}/../../.."
+MOKEE_ROOT="${MY_DIR}/../../.."
 
-HELPER="${MK_ROOT}/vendor/mokee/build/tools/extract_utils.sh"
+HELPER="${MOKEE_ROOT}/vendor/mokee/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -35,7 +35,7 @@ fi
 source "${HELPER}"
 
 # Initialize the helper for common
-setup_vendor "${DEVICE}" "${VENDOR}" "${MK_ROOT}" false
+setup_vendor "${DEVICE}" "${VENDOR}" "${MOKEE_ROOT}" false
 
 # Copyright headers and guards
 write_headers "${DEVICE}"
