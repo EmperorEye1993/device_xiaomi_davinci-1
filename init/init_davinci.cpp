@@ -78,7 +78,9 @@ void set_ro_prop(const std::string &prop_type, const std::string &prop, const st
 
 void vendor_load_properties() {
     std::string region;
+    std::string security_patch;
     region = GetProperty("ro.boot.hwc", "GLOBAL");
+    security_patch = GetProperty("ro.build.version.security_patch", "");
 
     std::string model;
     std::string device;
@@ -104,7 +106,16 @@ void vendor_load_properties() {
 
     // Safetynet workaround
     property_override("ro.boot.verifiedbootstate", "green");
-    fingerprint = "google/coral/coral:10/QQ3A.200705.002/6506677:user/release-keys";
+    // Dynamically select the fingerprint for the current security patch
+    if (security_patch == "2020-07-05") {
+        fingerprint = "google/coral/coral:10/QQ3A.200705.002/6506677:user/release-keys";
+    } else if (security_patch == "2020-08-05") {
+        fingerprint = "google/coral/coral:10/QQ3A.200805.001/6578210:user/release-keys";
+    } else {
+        // Set MIUI's fingerprint if the security patch is not valid for any of the fingerprints
+        fingerprint = "Xiaomi/davinci/davinci:10/QKQ1.190825.002/V12.0.1.0.QFJMIXM:user/release-keys";
+    }
+
 
     set_ro_prop("build","fingerprint", fingerprint);
     set_ro_prop("product","device", device);
