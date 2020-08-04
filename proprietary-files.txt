@@ -61,10 +61,6 @@ vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libcomprcapture.so
 vendor/lib/libdsd2pcm.so
-vendor/lib/libgcs-calwrapper.so
-vendor/lib/libgcs-ipc.so
-vendor/lib/libgcs-osal.so
-vendor/lib/libgcs.so
 vendor/lib/libqtigef.so
 vendor/lib/libsmwrapper.so
 vendor/lib/soundfx/libasphere.so
