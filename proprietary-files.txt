@@ -878,7 +878,7 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Thermal
-init.mi_thermald.rc:vendor/etc/init/init.mi_thermald.rc
+init.mi_thermald.rc:vendor/etc/init/init.mi_thermald.rc|93377ddf881f27dabb2918adbe7215934eb8531f
 vendor/bin/mi_thermald
 vendor/bin/thermal-engine
 vendor/etc/thermal-arvr.conf
