@@ -59,7 +59,6 @@ vendor/lib/libcapiv2vop.so
 vendor/lib/libdsd2pcm.so
 vendor/lib/libqtigef.so
 vendor/lib/libsmwrapper.so
-vendor/lib/soundfx/libasphere.so
 
 # Audio (ACDB)
 vendor/etc/acdbdata/adsp_avs_config.acdb
