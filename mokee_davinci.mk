@@ -24,6 +24,9 @@ $(call inherit-product, device/xiaomi/davinci/device.mk)
 # Inherit some common MoKee stuff.
 $(call inherit-product, vendor/mokee/config/common_full_phone.mk)
 
+# Inherit config from custom vendor
+$(call inherit-product, vendor/daniml3/config.mk)
+
 PRODUCT_NAME := mokee_davinci
 PRODUCT_DEVICE := davinci
 PRODUCT_BRAND := Xiaomi
