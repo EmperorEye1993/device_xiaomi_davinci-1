@@ -24,6 +24,10 @@ $(call inherit-product, device/xiaomi/davinci/device.mk)
 # Inherit some common MoKee stuff.
 $(call inherit-product, vendor/mokee/config/common_full_phone.mk)
 
+# Enable updating of APEXes
+OVERRIDE_TARGET_FLATTEN_APEX := false
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 # Inherit config from custom vendor
 $(call inherit-product, vendor/daniml3/config.mk)
 
