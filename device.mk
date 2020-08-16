@@ -87,7 +87,9 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    BluetoothQti
+    BluetoothQti \
+    android.hardware.bluetooth.a2dp@1.0-impl \
+    libbthost_if
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
