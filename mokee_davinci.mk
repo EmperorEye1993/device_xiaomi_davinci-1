@@ -25,10 +25,7 @@ $(call inherit-product, device/xiaomi/davinci/device.mk)
 $(call inherit-product, vendor/mokee/config/common_full_phone.mk)
 
 # Inherit config from custom vendor
-IS_PHONE := true
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_STOCK_ARCORE := true
-$(call inherit-product, vendor/custom/config.mk)
+$(call inherit-product-if-exists, vendor/custom/config.mk)
 
 PRODUCT_NAME := mokee_davinci
 PRODUCT_DEVICE := davinci
